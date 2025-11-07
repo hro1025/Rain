@@ -9,7 +9,7 @@ class Program
         while (true) // This place the code into an loop so it possible to run it again
         {
             // This gives output by the program and a input by the user
-            Console.WriteLine("Hei!\nRegner det for deg? (Ja eller Nei)");
+            Console.WriteLine("Hei!\nRegner det for deg? (Ja eller Nei)😄");
             string? input = Console.ReadLine();
             if (input == "ja" || input == "Ja")
             {
