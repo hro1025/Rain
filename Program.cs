@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using Spectre.Console;
 
 namespace Rain;
 
@@ -9,7 +10,7 @@ class Program
         while (true) // This place the code into an loop so it possible to run it again
         {
             // This gives output by the program and a input by the user
-            Console.WriteLine("Hei!" + Environment.NewLine + "Regner det for deg? (Ja eller Nei)");
+            Console.WriteLine("Hei!\nRegner det for deg? (Ja eller Nei)");
             string? input = Console.ReadLine();
 
             if (input.ToLower() == "ja")
@@ -29,8 +30,8 @@ class Program
                 );
                 string? avslutte = Console.ReadLine();
 
-                if (avslutte == "ja") { }
-                else if (avslutte == "nei")
+                if (avslutte == "ja" || avslutte == "Ja") { }
+                else if (avslutte == "nei" || avslutte == "Nei")
                 {
                     Environment.Exit(0);
                 }
