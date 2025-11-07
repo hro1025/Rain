@@ -1,7 +1,4 @@
-﻿using System.Diagnostics;
-using Spectre.Console;
-
-namespace Rain;
+﻿namespace Rain;
 
 class Program
 {
