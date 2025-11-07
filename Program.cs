@@ -1,4 +1,6 @@
-﻿namespace Rain;
+﻿using Spectre.Console;
+
+namespace Rain;
 
 class Program
 {
@@ -12,24 +14,27 @@ class Program
             if (input == "ja" || input == "Ja")
             {
                 Console.WriteLine("Det regner så du bør ta med deg regnjakke og paraply");
+                Thread.Sleep(3000);
                 break; // break makes the loop break and stop the application
             }
             else if (input == "nei" || input == "Nei")
             {
                 Console.WriteLine("Det regner ikke så du trenger ikke å ta med noe");
+                Thread.Sleep(3000);
                 break;
             }
             else // If the user write something else then 'Ja' and 'Nei'. this output will ask the user to try again or exit the program
             {
                 Console.WriteLine(
-                    "Skriv 'Ja eller Nei'\nHvis du vil prøve på nytt så skriv 'Ja' \nVil du avslutte programmet skriv 'Nei'"
+                    "Skriv 'Ja eller Nei'\nHvis du vil prøve på nytt så skriv 'Ja' \nVil du avslutte programmet skriv 'Exit'"
                 );
                 string? avslutte = Console.ReadLine();
 
                 if (avslutte == "ja" || avslutte == "Ja") { }
-                else if (avslutte == "nei" || avslutte == "Nei")
+                else if (avslutte == "Exit" || avslutte == "exit")
                 {
-                    Console.WriteLine("Programmet avsluttet...");
+                    AnsiConsole.Markup("[red]Programmet avsluttet...[/]");
+                    Thread.Sleep(3000);
                     Environment.Exit(0);
                 }
             }
