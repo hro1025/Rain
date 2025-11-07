@@ -1,7 +1,4 @@
-﻿using System.Diagnostics;
-using Spectre.Console.Cli;
-
-namespace Rain;
+﻿namespace Rain;
 
 class Program
 {
@@ -32,6 +29,7 @@ class Program
                 if (avslutte == "ja" || avslutte == "Ja") { }
                 else if (avslutte == "nei" || avslutte == "Nei")
                 {
+                    Console.WriteLine("Programmet avsluttet...");
                     Environment.Exit(0);
                 }
             }
